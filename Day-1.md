@@ -88,3 +88,116 @@ Reduction in strength or intensity of the signal as it's transmission distance i
 #### IPS (Intrusion Prevention System):
 + It detects and prevents the unwanted traffic entering the network.
 + Offers better security than IDS.
+
+# Linux
+## Common Terms and Concepts:
+### The Shell:
+`shell`  is an environment and interpreter for running commands  
+in Linux. it is a program that takes commands from user who is in user mode from keyboard using stdin, and sends them to operating system to perform actions depending on user input which has predefined functioning.
+
+`bash` (Bourne Again Shell) is one of the most used shell, there are others like ksh, zsh(in macOS), tsch.
+
+### Binaries:
++ These are the files than can be executed, similar to `.exe` files in windows.
++ They usually reside in `/usr/bin` or `/usr/sbin` .
++ The binaries include common utilities like `ps`, `cat`, `cd`.
+
+```bash
+Unlike Windows, Linux is case sensitive. ps != Ps
+```
+
+### Directory: 
+Same as folders in windows. provides a way of organizing files in hard disk or SSD in hierarchical manner.
+
+### root:
++ Super user who has complete control over the system. Be it from adding users to crashing the system (```sudo -rm -rf```)
+
+
+## The Linux File System
+![[Pasted image 20220602194907.png]]
++ `/` :  root of the file system.
++ `/bin` : Directory for Binaries, commands such as `ls`, `ps` are stored here.
++ `/sbin` : Super User Binaries.
+	+ Can be executed only by root users.
+	+ Like `mount`, `adduser`, `deluser`. 
++ `/lib` : Libraries
+	+ contains essential libraries and kernel modules.
+	+ also contains shared library images which are used to boot the system and run commands in root filesystem.
+	+ Similar to windows DLL's
++   `/boot` - Contains kernel boot loader files.
+-   `/dev` - Device files.
+-   `/etc` - Core system configuration directory, should hold only configuration files and not any binaries.
+-   `/home` - Personal directories for users, holds your documents, files, settings, etc.
+-   `/media` - Used as an attachment point for removable media like USB drives.
+-   `/mnt` - Temporarily mounted filesystems.
+-   `/opt` - Optional application software packages.
+-   `/proc` - Information about currently running processes.
+-   `/root `- The root user's home directory.
+-   `/run` - Information about the running system since the last boot.
+-   `/srv` - Site-specific data which are served by the system.
+-   `/tmp` - Storage for temporary files
+-   `/usr` - This is unfortunately named, most often it does not contain user files in the sense of a home folder. This is meant for user installed software and utilities, however that is not to say you can't add personal directories in there. Inside this directory are sub-directories for /usr/bin, /usr/local, etc.
+-   `/var` - Variable directory, it's used for system logging, user tracking, caches, etc. Basically anything that is subject to change all the time.
+
+## Common Linux  Commands:
+### `pwd`: 
++ Everything is a file in Linux and every file is organized in a hierarchial directory tree.
++ `pwd` prints the current working directory.
++ ![[pwd.png]]
+
+### `whoami`:
++ Current logged in user name.
++ ![[whoami.png]]
+
+### `cd`:
++ Change directory is used to move around the directories.
++ There always exists two hidden files in every directory, they are `./.` & `./..`
++ `.` refers to the current directory
+
+### `ls`:
++ list files and directories.
++ check for --help or man page to see the arguments that can be used.
++ -a -> to list all files and directories (including hidden one's)
++ -l -> long listing of all files and directories with user, group and other permissions. file size in bytes and owner.
++ ![[ls-l.png]]
+
+### `touch`:
++ It is used to change the timestamp of a file or to create a new file.
+![[touch.png]]
+
+### `file`:
++ It is used to show the file fomat of a file.
++ There can be a file `laughing.gif` which isn't actually a gif file.
++ `file` shows description of file's contents.
++ ![[file.png]]
+
+### `cat`:
++ stands for concatenate, it is used to read the contents of the file.
++ not great for viewing large content files.
++ ![[cat.png]]
+
+### `less` & `more`:
++ to view large contents in a fixed screen width, one after another, less is used.
++ On contrary to `less`, `more` is used.
+
+### `history`:
++ It is a history of the commands that you previously entered in the shell.
+### `cp`
+### `mv`
+### `rm`
+### `mkdir`
+### `rmdir`
+### `find`
+### `locate`
+### `help`
+### `man`
+### `whatis`
+### `whereis`
+### `which`
+### `alias`
+### `exit`
+### `grep`
+### `ps`
+
+
+
