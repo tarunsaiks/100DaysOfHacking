@@ -143,11 +143,11 @@ Same as folders in windows. provides a way of organizing files in hard disk or S
 ### `pwd`: 
 + Everything is a file in Linux and every file is organized in a hierarchial directory tree.
 + `pwd` prints the current working directory.
-+ ![[images/pwd.png]]
++ ![](images/pwd.png)
 
 ### `whoami`:
 + Current logged in user name.
-+ ![[images/whoami.png]]
++ ![](images/whoami.png)
 
 ### `cd`:
 + Change directory is used to move around the directories.
@@ -159,22 +159,22 @@ Same as folders in windows. provides a way of organizing files in hard disk or S
 + check for --help or man page to see the arguments that can be used.
 + -a -> to list all files and directories (including hidden one's)
 + -l -> long listing of all files and directories with user, group and other permissions. file size in bytes and owner.
-+ ![[images/ls-l.png]]
++ ![](images/ls-l.png)
 
 ### `touch`:
 + It is used to change the timestamp of a file or to create a new file.
-![[images/touch.png]]
+![](images/touch.png)
 
 ### `file`:
 + It is used to show the file fomat of a file.
 + There can be a file `laughing.gif` which isn't actually a gif file.
 + `file` shows description of file's contents.
-+ ![[images/file.png]]
++ ![](images/file.png)
 
 ### `cat`:
 + stands for concatenate, it is used to read the contents of the file.
 + not great for viewing large content files.
-+ ![[images/cat.png]]
++ ![](images/cat.png)
 
 ### `less` & `more`:
 + to view large contents in a fixed screen width, one after another, less is used.
