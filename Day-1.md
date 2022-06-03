@@ -182,22 +182,72 @@ Same as folders in windows. provides a way of organizing files in hard disk or S
 
 ### `history`:
 + It is a history of the commands that you previously entered in the shell.
-### `cp`
-### `mv`
-### `rm`
-### `mkdir`
-### `rmdir`
-### `find`
-### `locate`
-### `help`
-### `man`
-### `whatis`
-### `whereis`
-### `which`
-### `alias`
-### `exit`
-### `grep`
-### `ps`
 
+### `cp`:
++ It is used to copy files and directories from one directory to other directory.
++ You can copy multiple files and directories as well as use wildcards. A wildcard is a character that can be substituted for a pattern based selection, giving you more flexibility with searches. 
++ You can use wildcards in every command for more flexibility.
+	-   `*` the wildcard of wildcards, it's used to represent all single characters or any string.
+	-   `?` used to represent one character
+	-   `[]` used to represent any character within the brackets
++ To copy files inside a directory in pwd, we have to use `-r` to recursively copy files.
 
+### `mv`:
++ It is used to move contents of one file/directory to another file/directory.
++ It acts similar to rename in windows.
++ use the `-i` flag to prompt you before overwriting anything.
 
+### `rm`:
++ To remove files you can use the rm command. The rm (remove) command is used to delete files and directories.
++ If a directory is write-protected it will also not be easily removed. use `-f` to **force** remove.
++ Use `-i` to get the prompts before deleting, like how windows asks you **ARE YOU SURE YOU WANT TO DELETE THIS FILE PERMANENTLY????**
++ `rmdir` is used to remove a directory
++ To remove a directory which has multiple directories inside it, use `-p` (parent flag) and the directories to be deleted.
+
+### `mkdir`:
++ Used to make directory (create new directory).
++ sub directories can be created using `-p` (parent flag).
+
+### `find`:
++ `find` is used to find the files and directories present in the system.
++ arguments to find are very important to manage different versions of files.
++ arguments like:
+```
+-readable
+-size
+-name
+-type
+```
++ check the [man](https://www.man7.org/linux/man-pages/man1/find.1.html) page for more info on arguments.
+
+### `locate`:
++ Probably the easiest command to use is `locate`. Followed by a keyword denoting what it is you want to find, this command will go through your entire filesystem and locate every occurrence of that word.
++ `locate`  
+uses a database that is usually only updated once a day, so if you just created  
+a file a few minutes or a few hours ago, it might not appear in this list until  
+the next day.
++ Use the `updatedb` to update the local database
+```bash
+sudo updatedb
+```
+
+### `help`:
++ `help` is a built-in bash command that provides help for other bash commands (echo, logout, pwd, etc).
+
+### `man`:
++ manual pages for commands, to refer the arguments and functionality of a command.
+
+### `whatis`:
++ `whatis` command provides a brief description of command line programs.
+
+### `whereis`:
++ `whereis` command to  
+locate it. This command returns not only the location of the binary but  
+also its source and man page if they are available.
+
+### `which`:
++ `which` command is even more specific: it only returns the location of  
+the binaries in the PATH variable in Linux
+
+### `alias`:
++ if you need to type a long command many times, it’s best to have an `alias` you can use for that. To create an alias for a command you simply specify an `alias` **name** and set it to the command.
