@@ -89,11 +89,13 @@ The password for the next level is stored somewhere on the server and has all of
 
 + `find` has the argument to check `user` 
 + `find` has the argument to check `group`
+
 ```bash
 find -user bandit7 -group bandit6 -size 33c
 ```
 
+`2> file redirects stderr to file`
+
 This gives alot of error messages, which can be removed using `2>/dev/null`
 
-`2> file redirects stderr to file`
 
